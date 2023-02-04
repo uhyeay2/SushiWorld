@@ -4,6 +4,8 @@ namespace SushiWorld.Console.Tests.Models
 {
     public class ShoppingCartTests
     {
+        #region Add
+
         [Fact]
         public void Add_Given_NullItem_Should_ReturnZero()
         {
@@ -57,5 +59,40 @@ namespace SushiWorld.Console.Tests.Models
 
             Assert.True(countOfItems == countToAdd);
         }
+
+        [Theory]
+        [InlineData(1)]
+        [InlineData(5)]
+        [InlineData(10)]
+        public void Add_Given_ItemIsInserted_Should_ReturnCountOfItemsAdded(int countToAdd)
+        {
+            var shoppingCart = new ShoppingCart();
+            var itemToAdd = new PurchaseableItem("itemCode", "itemName", price: 0);
+
+            var result = shoppingCart.Add(itemToAdd, countToAdd);
+
+            Assert.Equal(countToAdd, result);
+        }
+
+        [Theory]
+        [InlineData(1, 2)]
+        [InlineData(5, 10)]
+        [InlineData(10, 53)]
+        public void Add_Given_ItemAlreadyExists_Should_IncreaseCount(int countToAddFirst, int countToAddSecond)
+        {
+            var shoppingCart = new ShoppingCart();
+            var itemToAdd = new PurchaseableItem("itemCode", "itemName", price: 0);
+            var countExpected = countToAddFirst + countToAddSecond;
+
+            shoppingCart.Add(itemToAdd, countToAddFirst);
+            shoppingCart.Add(itemToAdd, countToAddSecond);
+
+            var countOfItems = shoppingCart.Items.First().Count;
+
+            Assert.Equal(countExpected, countOfItems);
+        }
+
+        #endregion
+
     }
 }
