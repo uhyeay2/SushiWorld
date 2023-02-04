@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SushiWorld.Console", "SushiWorld.Console\SushiWorld.Console.csproj", "{853B973E-05C1-4151-9586-5328A6AE8D6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SushiWorld.Console.Tests", "SushiWorld.Console.Tests\SushiWorld.Console.Tests.csproj", "{8AFC71D2-7E81-4F3D-8A1B-B6CFBB413207}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{853B973E-05C1-4151-9586-5328A6AE8D6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{853B973E-05C1-4151-9586-5328A6AE8D6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{853B973E-05C1-4151-9586-5328A6AE8D6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{853B973E-05C1-4151-9586-5328A6AE8D6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AFC71D2-7E81-4F3D-8A1B-B6CFBB413207}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AFC71D2-7E81-4F3D-8A1B-B6CFBB413207}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AFC71D2-7E81-4F3D-8A1B-B6CFBB413207}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AFC71D2-7E81-4F3D-8A1B-B6CFBB413207}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {58376DFD-9924-4197-83CC-7665B43FB2B4}
+	EndGlobalSection
+EndGlobal
